@@ -7,16 +7,19 @@ import Product from "./components/Product";
 import Details from "./components/Details";
 import Default from "./components/Default";
 import Cart from "./components/Cart";
+import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <Fragment>
         <Navbar />
-        <Product />
-        <Details />
-        <Cart />
-        <Default />
+        <Switch>
+          <Route exact path="/" component={Product} />
+          <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
+          <Route component={Default} />
+        </Switch>
       </Fragment>
     );
   }
