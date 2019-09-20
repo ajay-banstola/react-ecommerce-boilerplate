@@ -1,22 +1,26 @@
-.App {
-  text-align: center;
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+}
+body {
+  font-family: "Oswald", sans-serif !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
 }
 
-.App-logo {
-  height: 40vmin;
+.text-title {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 0.3 rem;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-blue {
+  color: var(--mainBlue);
 }
 
-.App-link {
-  color: #09d3ac;
+.text-bright {
+  color: var(--lightBlue);
 }
