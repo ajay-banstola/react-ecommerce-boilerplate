@@ -8,11 +8,14 @@ export default class Product extends Component {
     const { id, title, img, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-        <div class="card text-left">
-          <img class="card-img-top" src="holder.js/100px180/" alt="" />
-          <div class="card-body">
-            <h4 class="card-title">{title}</h4>
-            <p class="card-text">{img}</p>
+        <div claassName="card">
+          <div
+            className="img-container p-5"
+            onClick={console.log("you clicked me on image container")}
+          >
+            <Link to="/details">
+              <img src={img} alt="product" className="card-img-top" />
+            </Link>
           </div>
         </div>
       </ProductWrapper>
