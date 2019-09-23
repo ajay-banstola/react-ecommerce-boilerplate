@@ -19,16 +19,16 @@ export default class Details extends Component {
           } = value.detailProduct;
 
           return (
-            <div class="container py-5">
+            <div className="container py-5">
               {/*title */}
-              <div class="row">
+              <div className="row">
                 <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
                   <h1>{title}</h1>
                 </div>
               </div>
               {/*end title */}
               {/**Product info */}
-              <div class="row">
+              <div className="row">
                 <div className="col-10 mx-auto col-md-6 my-3">
                   <img src={img} className="img-fluid" alt="product" />
                 </div>
@@ -47,6 +47,20 @@ export default class Details extends Component {
                     Some info about Product:
                   </p>
                   <p className="text-muted lead">{info}</p>
+                  {/* buttons */}
+                  <div>
+                    <Link to="/">
+                      <ButtonContainer>Back to products</ButtonContainer>
+                    </Link>
+                    <ButtonContainer
+                      disabled={inCart ? true : false}
+                      onClick={() => {
+                        value.addToCart(id);
+                      }}
+                    >
+                      {inCart ? "inCart" : "add to Cart"}
+                    </ButtonContainer>
+                  </div>
                 </div>
               </div>
             </div>

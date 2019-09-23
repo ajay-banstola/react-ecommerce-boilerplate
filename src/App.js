@@ -7,9 +7,10 @@ import ProductList from "./components/ProductList";
 import Details from "./components/Details";
 import Default from "./components/Default";
 import Cart from "./components/Cart";
-import ValidatedLoginForm from "./components/LoginForm";
+import LoginForm from "./components/LoginForm";
 import { Switch, Route } from "react-router-dom";
 import "./css/style.css";
+import Landingpage from "./components/Landingpge";
 
 class App extends Component {
   render() {
@@ -17,10 +18,11 @@ class App extends Component {
       <Fragment>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={ProductList} />
+          <Route exact path="/list" component={ProductList} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
-          <Route path="/login" component={ValidatedLoginForm} />
+          <Route path="/login" component={LoginForm} />
+          <Route path="/" component={Landingpage} />
           <Route component={Default} />
         </Switch>
       </Fragment>

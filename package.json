@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "email-validator": "^2.0.4",
+    "formik": "^1.5.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.2",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
